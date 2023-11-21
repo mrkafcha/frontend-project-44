@@ -4,7 +4,7 @@
 import name from '../src/cli.js';
 import question from '../src/even.js';
 
-const userName = name('Welcome to the Brain Games!\nMay I have your name? ');
 
-console.log(`Hello, ${userName}!`);
-console.log(`${question()}${userName}!`);
+console.log(`Hello, ${name}!`);
+console.log("Answer 'yes' if number even otherwise answer 'no'.");
+console.log(`${question()}${name}!`);

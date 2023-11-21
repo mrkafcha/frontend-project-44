@@ -1,15 +1,14 @@
 /* eslint-disable no-console */
 /* eslint-disable import/extensions */
 import _ from 'lodash';
-import name from './cli.js';
+import readlineSync from 'readline-sync';
 
 const question = () => {
   for (let i = 1; i <= 3; i += 1) {
     const random = _.random(1, 50);
     const parity = random % 2;
-    console.log("Answer 'yes' if number even otherwise answer 'no'.");
     console.log(`Question: ${random}`);
-    const answer = name('Your answer: ');
+    const answer = readlineSync.question('Your answer: ');
 
     switch (answer) {
       case 'yes':
