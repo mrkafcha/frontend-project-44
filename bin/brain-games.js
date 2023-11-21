@@ -1,4 +1,8 @@
 #!/usr/bin/env node
-import { userName } from "../src/cli.js";
+/* eslint-disable no-console */
+/* eslint-disable import/extensions */
+import name from '../src/cli.js';
 
-console.log('Hello, ' + userName + '!');
+const userName = name('Welcome to the Brain Games!\nMay I have your name? ');
+
+console.log(`Hello, ${userName}!`);
