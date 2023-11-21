@@ -1,8 +1,5 @@
 import readlineSync from 'readline-sync';
 
-const name = (str) => {
-  const nameUser = readlineSync.question(str);
-  return nameUser;
-};
+const name = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
 
 export default name;
