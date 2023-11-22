@@ -1,13 +1,13 @@
 /* eslint-disable no-console */
 /* eslint-disable import/extensions */
-import _ from 'lodash';
+import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
 const question = () => {
   for (let i = 1; i <= 3; i += 1) {
-    const random = _.random(1, 50);
-    const parity = random % 2;
-    console.log(`Question: ${random}`);
+    const num = random(1, 50);
+    const parity = num % 2;
+    console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer: ');
 
     switch (answer) {
