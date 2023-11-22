@@ -3,8 +3,8 @@
 import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
-const gameParity = () => {
-  for (let i = 1; i <= 3; i += 1) {
+const gameParity = (part) => {
+  for (let i = 1; i <= part; i += 1) {
     const num = random(1, 50);
     const result = Math.sign(num % 2);
     console.log(`Question: ${num}`);

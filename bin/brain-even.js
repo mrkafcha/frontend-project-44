@@ -6,4 +6,4 @@ import gameParity from '../src/even.js';
 
 console.log(`Hello, ${name}!`);
 console.log("Answer 'yes' if number even otherwise answer 'no'.");
-console.log(`${gameParity()}${name}!`);
+console.log(`${gameParity(3)}${name}!`);
