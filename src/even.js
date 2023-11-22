@@ -16,8 +16,7 @@ const gameParity = (part) => {
       } else {
         return `'${answer}' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, `;
       }
-    }
-    if (result !== 0) {
+    } else if (result !== 0) {
       if (answer === 'no') {
         console.log('Correct!');
       } else {
