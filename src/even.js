@@ -7,7 +7,7 @@ const evenResult = (num) => {
   if (num === 0) {
     return 'yes';
   }
-  return 'no'
+  return 'no';
 };
 
 const gameParity = (part) => {
@@ -17,7 +17,7 @@ const gameParity = (part) => {
     const result = evenResult(even);
     console.log(`Question: ${num}`);
     const answer = readlineSync.question('Your answer: ');
-    
+
     if (result === answer) {
       console.log('Correct!');
     } else {
