@@ -1,15 +1,13 @@
-
 /* eslint-disable no-console */
 /* eslint-disable import/extensions */
 import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
 const randomOperators = () => {
-    const operation = ['+' , '-' , '*'];
-    const randomIndex = random(0, 2); 
-    return operation[randomIndex]; 
-}
-
+  const operation = ['+', '-', '*'];
+  const randomIndex = random(0, 2);
+  return operation[randomIndex];
+};
 
 const gameCalc = () => {
   for (let i = 1; i <= 3; i += 1) {
@@ -19,7 +17,7 @@ const gameCalc = () => {
     const operation = randomOperators();
     console.log(`Question: ${numOne} ${operation} ${numTwo}`);
     const answer = Number(readlineSync.question('Your answer: '));
-    
+
     switch (operation) {
       case '-':
         result = numOne - numTwo;
@@ -29,6 +27,8 @@ const gameCalc = () => {
         break;
       case '*':
         result = numOne * numTwo;
+        break;
+      default:
     }
 
     if (answer === result) {
