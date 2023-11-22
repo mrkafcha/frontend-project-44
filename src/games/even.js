@@ -10,7 +10,8 @@ const evenResult = (num) => {
   return 'no';
 };
 
-const gameParity = (part) => {
+const gameEven = (part) => {
+  console.log("Answer 'yes' if number even otherwise answer 'no'.");
   for (let i = 1; i <= part; i += 1) {
     const num = random(1, 50);
     const even = Math.sign(num % 2);
@@ -28,4 +29,4 @@ const gameParity = (part) => {
   return 'Congratulations, ';
 };
 
-export default gameParity;
+export default gameEven;
