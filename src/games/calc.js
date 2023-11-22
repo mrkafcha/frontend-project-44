@@ -8,9 +8,9 @@ const randomOperators = (operation) => {
   return operation[randomIndex];
 };
 
-const resultOperations = (numOne, numTwo, operation) => {
+const resultOperation = (numOne, numTwo, operator) => {
   let result;
-  switch (operation) {
+  switch (operator) {
     case '-':
       result = numOne - numTwo;
       break;
@@ -26,13 +26,14 @@ const resultOperations = (numOne, numTwo, operation) => {
 };
 
 const gameCalc = () => {
+  console.log('What is the result of the expression?');
   for (let i = 1; i <= 3; i += 1) {
     const numOne = random(1, 20);
     const numTwo = random(1, 20);
-    const operation = randomOperators(['+', '-', '*']);
+    const operator = randomOperators(['+', '-', '*']);
     console.log(`Question: ${numOne} ${operation} ${numTwo}`);
     const answer = Number(readlineSync.question('Your answer: '));
-    const result = resultOperations(numOne, numTwo, operation);
+    const result = resultOperation(numOne, numTwo, operator);
 
     if (answer === result) {
       console.log('Correct!');
