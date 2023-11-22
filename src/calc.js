@@ -13,7 +13,7 @@ const gameCalc = () => {
   for (let i = 1; i <= 3; i += 1) {
     const numOne = random(1, 20);
     const numTwo = random(1, 20);
-    let result = 0;
+    let result;
     const operation = randomOperators();
     console.log(`Question: ${numOne} ${operation} ${numTwo}`);
     const answer = Number(readlineSync.question('Your answer: '));
