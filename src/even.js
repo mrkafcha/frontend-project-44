@@ -3,7 +3,7 @@
 import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
-const question = () => {
+const gameParity = () => {
   for (let i = 1; i <= 3; i += 1) {
     const num = random(1, 50);
     const parity = num % 2;
@@ -33,4 +33,4 @@ const question = () => {
   return 'Congratulations, ';
 };
 
-export default question;
+export default gameParity;
