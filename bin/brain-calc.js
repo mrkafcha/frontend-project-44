@@ -6,4 +6,4 @@ import gameCalc from '../src/calc.js';
 
 console.log(`Hello, ${name}!`);
 console.log('What is the result of the expression?');
-console.log(`${gameCalc()}${name}!`);
+console.log(`${gameCalc(3)}${name}!`);

@@ -3,33 +3,36 @@
 import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
-const randomOperators = () => {
-  const operation = ['+', '-', '*'];
-  const randomIndex = random(0, 2);
+const randomOperators = (operation) => {
+  const randomIndex = random(0, operation.length);
   return operation[randomIndex];
+};
+
+const resultOperations = (numOne, numTwo, operation) => {
+  let result;
+  switch (operation) {
+    case '-':
+      result = numOne - numTwo;
+      break;
+    case '+':
+      result = numOne + numTwo;
+      break;
+    case '*':
+      result = numOne * numTwo;
+      break;
+    default:
+  }
+  return result;
 };
 
 const gameCalc = () => {
   for (let i = 1; i <= 3; i += 1) {
     const numOne = random(1, 20);
     const numTwo = random(1, 20);
-    let result;
-    const operation = randomOperators();
+    const operation = randomOperators(['+', '-', '*']);
     console.log(`Question: ${numOne} ${operation} ${numTwo}`);
     const answer = Number(readlineSync.question('Your answer: '));
-
-    switch (operation) {
-      case '-':
-        result = numOne - numTwo;
-        break;
-      case '+':
-        result = numOne + numTwo;
-        break;
-      case '*':
-        result = numOne * numTwo;
-        break;
-      default:
-    }
+    const result = resultOperations(numOne, numTwo, operation);
 
     if (answer === result) {
       console.log('Correct!');
