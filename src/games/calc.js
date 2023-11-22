@@ -4,7 +4,8 @@ import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
 const randomOperators = (operation) => {
-  const randomIndex = random(0, operation.length);
+  const lastIndex = operation.length - 1
+  const randomIndex = random(0, lastIndex);
   return operation[randomIndex];
 };
 
@@ -31,7 +32,7 @@ const gameCalc = () => {
     const numOne = random(1, 20);
     const numTwo = random(1, 20);
     const operator = randomOperators(['+', '-', '*']);
-    console.log(`Question: ${numOne} ${operation} ${numTwo}`);
+    console.log(`Question: ${numOne} ${operator} ${numTwo}`);
     const answer = Number(readlineSync.question('Your answer: '));
     const result = resultOperation(numOne, numTwo, operator);
 
