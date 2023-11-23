@@ -4,22 +4,19 @@ import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
 const resultDivider = (numOne, numTwo) => {
-  let divider;
-  if (numOne >= numTwo) {
-    divider = numTwo;
-  } else {
-    divider = numOne
-  }
+  const divider = numOne >= numTwo ? numTwo : numOne;
+
   for (let i = divider; i >= 1; i -= 1) {
     if (numOne % i === 0 && numTwo % i === 0) {
-        return i;
+      return i;
     }
   }
+  return 1;
 };
 
 const gameGcd = (part) => {
   console.log('What is the result of the expression?');
-  for (let i = 1; i <= 3; i += 1) {
+  for (let i = 1; i <= part; i += 1) {
     const numOne = random(1, 50);
     const numTwo = random(1, 50);
     console.log(`Question: ${numOne} ${numTwo}`);
@@ -32,7 +29,7 @@ const gameGcd = (part) => {
       return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, `;
     }
   }
- 
+
   return 'Congratulations, ';
 };
 
