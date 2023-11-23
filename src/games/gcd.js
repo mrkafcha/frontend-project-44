@@ -15,7 +15,7 @@ const resultDivider = (numOne, numTwo) => {
 };
 
 const gameGcd = (part) => {
-  console.log('What is the result of the expression?');
+  console.log('Find the greatest common divisor of given numbers.');
   for (let i = 1; i <= part; i += 1) {
     const numOne = random(1, 50);
     const numTwo = random(1, 50);
