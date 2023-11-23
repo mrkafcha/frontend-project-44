@@ -4,7 +4,7 @@ import random from 'lodash/random.js';
 import readlineSync from 'readline-sync';
 
 const randomOperators = (operation) => {
-  const lastIndex = operation.length - 1
+  const lastIndex = operation.length - 1;
   const randomIndex = random(0, lastIndex);
   return operation[randomIndex];
 };
