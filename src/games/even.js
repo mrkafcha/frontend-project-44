@@ -1,32 +1,21 @@
 /* eslint-disable no-console */
 /* eslint-disable import/extensions */
 import random from 'lodash/random.js';
-import readlineSync from 'readline-sync';
 
-const evenResult = (num) => {
-  if (num === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
+const gameEven = () => {
+  const startDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const num = random(1, 50);
+  const even = Math.sign(num % 2);
+  let result;
+  const question = `${num}`;
 
-const gameEven = (part) => {
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  for (let i = 1; i <= part; i += 1) {
-    const num = random(1, 50);
-    const even = Math.sign(num % 2);
-    const result = evenResult(even);
-    console.log(`Question: ${num}`);
-    const answer = readlineSync.question('Your answer: ');
-
-    if (result === answer) {
-      console.log('Correct!');
-    } else {
-      return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, `;
-    }
+  if (even === 0) {
+    result = 'yes';
+  } else {
+    result = 'no';
   }
 
-  return 'Congratulations, ';
+  return [startDescription, question, result];
 };
 
 export default gameEven;

@@ -4,5 +4,4 @@
 import name from '../src/index.js';
 import gameEven from '../src/games/even.js';
 
-console.log(`Hello, ${name}!`);
-console.log(`${gameEven(3)}${name}!`);
+name(gameEven);
