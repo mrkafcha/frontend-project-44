@@ -15,7 +15,7 @@ const evenResult = (num) => {
 };
 
 const gamePrime = (part) => {
-  console.log("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   for (let i = 1; i <= part; i += 1) {
     const num = random(2, 53);
     const result = evenResult(num);
