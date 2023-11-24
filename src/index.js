@@ -17,7 +17,7 @@ export default (gameLogic) => {
     if (String(result) === answer) {
       console.log('Correct!');
     } else {
-      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, `);
+      return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`);
     }
   }
 
