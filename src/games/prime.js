@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable import/extensions */
 import random from 'lodash/random.js';
-import readlineSync from 'readline-sync';
 
 const evenResult = (num) => {
   let i = Math.round(num / 2);
@@ -14,22 +13,13 @@ const evenResult = (num) => {
   return 'yes';
 };
 
-const gamePrime = (part) => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  for (let i = 1; i <= part; i += 1) {
-    const num = random(2, 53);
-    const result = evenResult(num);
-    console.log(`Question: ${num}`);
-    const answer = readlineSync.question('Your answer: ');
+const gamePrime = () => {
+  const startDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const num = random(2, 53);
+  const result = evenResult(num);
+  const question = `${num}`;
 
-    if (result === answer) {
-      console.log('Correct!');
-    } else {
-      return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, `;
-    }
-  }
-
-  return 'Congratulations, ';
+  return [startDescription, question, result];
 };
 
 export default gamePrime;
