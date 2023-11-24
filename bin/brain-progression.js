@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
 import name from '../src/index.js';
-import gameProgression from '../src/games/progression.js';
+import runGameProgression from '../src/games/progression.js';
 
-name(gameProgression);
+name(runGameProgression);
