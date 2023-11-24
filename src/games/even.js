@@ -11,7 +11,7 @@ const evenResult = (num) => {
 };
 
 const gameEven = (part) => {
-  console.log("Answer 'yes' if number even otherwise answer 'no'.");
+  console.log('Answer "yes" if number even otherwise answer "no".');
   for (let i = 1; i <= part; i += 1) {
     const num = random(1, 50);
     const even = Math.sign(num % 2);
