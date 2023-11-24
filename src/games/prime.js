@@ -2,7 +2,7 @@ const getRandomInt = (min, max) => Math.ceil(Math.random() * (max - min)) + min;
 
 const getEvenResult = (num) => {
   let i = Math.round(num / 2);
-  for (i; i >= 2; i -= 1) {    
+  for (i; i >= 2; i -= 1) {
     if (num % i === 0) {
       return 'no';
     }
