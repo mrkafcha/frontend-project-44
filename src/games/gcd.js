@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable import/extensions */
 import random from 'lodash/random.js';
-import readlineSync from 'readline-sync';
 
 const resultDivider = (numOne, numTwo) => {
   const divider = numOne >= numTwo ? numTwo : numOne;
@@ -14,23 +13,14 @@ const resultDivider = (numOne, numTwo) => {
   return 1;
 };
 
-const gameGcd = (part) => {
-  console.log('Find the greatest common divisor of given numbers.');
-  for (let i = 1; i <= part; i += 1) {
-    const numOne = random(1, 50);
-    const numTwo = random(1, 50);
-    console.log(`Question: ${numOne} ${numTwo}`);
-    const answer = Number(readlineSync.question('Your answer: '));
-    const result = resultDivider(numOne, numTwo);
+const gameGcd = () => {
+  const startDescription = 'Find the greatest common divisor of given numbers.';
+  const numOne = random(1, 50);
+  const numTwo = random(1, 50);
+  const result = resultDivider(numOne, numTwo);
+  const question = `${numOne} ${numTwo}`;
 
-    if (answer === result) {
-      console.log('Correct!');
-    } else {
-      return `'${answer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, `;
-    }
-  }
-
-  return 'Congratulations, ';
+  return [startDescription, question, result];
 };
 
 export default gameGcd;

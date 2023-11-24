@@ -4,5 +4,4 @@
 import name from '../src/index.js';
 import gameGcd from '../src/games/gcd.js';
 
-console.log(`Hello, ${name}!`);
-console.log(`${gameGcd(3)}${name}!`);
+name(gameGcd);
