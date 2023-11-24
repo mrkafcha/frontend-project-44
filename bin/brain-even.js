@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
 import name from '../src/index.js';
-import gameEven from '../src/games/even.js';
+import runGameEven from '../src/games/even.js';
 
-name(gameEven);
+name(runGameEven);

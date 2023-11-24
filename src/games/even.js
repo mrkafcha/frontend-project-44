@@ -1,21 +1,17 @@
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
-import random from 'lodash/random.js';
+const getRandomInt = (min, max) => Math.ceil(Math.random() * (max - min)) + min;
 
-const gameEven = () => {
+const checkEven = (num) => (num === 0 ? 'yes' : 'no');
+
+const runGameEven = () => {
+  const startInterval = 1;
+  const endInterval = 50;
   const startDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const num = random(1, 50);
+  const num = getRandomInt(startInterval, endInterval);
   const even = Math.sign(num % 2);
-  let result;
+  const result = checkEven(even);
   const question = `${num}`;
-
-  if (even === 0) {
-    result = 'yes';
-  } else {
-    result = 'no';
-  }
 
   return [startDescription, question, result];
 };
 
-export default gameEven;
+export default runGameEven;
