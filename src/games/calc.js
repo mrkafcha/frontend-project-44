@@ -1,39 +1,36 @@
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
-import random from 'lodash/random.js';
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-const randomOperators = (operation) => {
-  const lastIndex = operation.length - 1;
-  const randomIndex = random(0, lastIndex);
+const getRandomOperators = (operation) => {
+  const indexFirstOperator = 0;
+  const indexLastOperator = operation.length;
+  const randomIndex = getRandomInt(indexFirstOperator, indexLastOperator);
   return operation[randomIndex];
 };
 
 const resultOperation = (numOne, numTwo, operator) => {
-  let result;
   switch (operator) {
     case '-':
-      result = numOne - numTwo;
-      break;
+      return numOne - numTwo;
     case '+':
-      result = numOne + numTwo;
-      break;
+      return numOne + numTwo;
     case '*':
-      result = numOne * numTwo;
-      break;
+      return numOne * numTwo;
     default:
+      return false;
   }
-  return result;
 };
 
-const gameCalc = () => {
+const runGameCalc = () => {
+  const startInterval = 1;
+  const endInterval = 21;
   const startDescription = 'What is the result of the expression?';
-  const numOne = random(1, 20);
-  const numTwo = random(1, 20);
-  const operator = randomOperators(['+', '-', '*']);
-  const question = `${numOne} ${operator} ${numTwo}`;
-  const result = resultOperation(numOne, numTwo, operator);
+  const firstNumber = getRandomInt(startInterval, endInterval);
+  const secondNumber = getRandomInt(startInterval, endInterval);
+  const operator = getRandomOperators(['+', '-', '*']);
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  const result = String(resultOperation(firstNumber, secondNumber, operator));
 
   return [startDescription, question, result];
 };
 
-export default gameCalc;
+export default runGameCalc;
