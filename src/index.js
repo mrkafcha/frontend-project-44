@@ -21,5 +21,5 @@ export default (gameLogic) => {
     }
   }
 
-  return console.log(`Congratulations, ${userName}`);
+  return console.log(`Congratulations, ${userName}!`);
 };
