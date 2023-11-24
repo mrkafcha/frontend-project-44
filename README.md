@@ -2,7 +2,8 @@
 [![Actions Status](https://github.com/mrkafcha/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/mrkafcha/frontend-project-44/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5970fbae67d4b2fe1c06/maintainability)](https://codeclimate.com/github/mrkafcha/frontend-project-44/maintainability)
 
-Описание
+## Описание
+
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
 Определение четного числа.
