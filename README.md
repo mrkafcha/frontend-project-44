@@ -16,20 +16,20 @@
 Определение простого числа.
 
 
-Пример игры:
+# Пример игры:
 
 
-Определение четного числа:
+# Определение четного числа:
 [![asciicast](https://asciinema.org/a/W9W1hPtsA7uee1tSE2X13x5EX.svg)](https://asciinema.org/a/W9W1hPtsA7uee1tSE2X13x5EX)
 
-Калькулятор:
+# Калькулятор:
 [![asciicast](https://asciinema.org/a/9nSbUY08wDfvbnKDcfMZGVDhH.svg)](https://asciinema.org/a/9nSbUY08wDfvbnKDcfMZGVDhH)
 
-Определение наибольшего общего делителя:
+# Определение наибольшего общего делителя:
 [![asciicast](https://asciinema.org/a/LhJX5qRVTP3ipTi1QYn5vwiYF.svg)](https://asciinema.org/a/LhJX5qRVTP3ipTi1QYn5vwiYF)
 
-Прогрессия:
+# Прогрессия:
 [![asciicast](https://asciinema.org/a/JEtTeCmih7NCKXEFWepR4TZkL.svg)](https://asciinema.org/a/JEtTeCmih7NCKXEFWepR4TZkL)
 
-Определение простого числа:
+# Определение простого числа:
 [![asciicast](https://asciinema.org/a/59k0gQZa8ZjmO9jaKmVTqx56v.svg)](https://asciinema.org/a/59k0gQZa8ZjmO9jaKmVTqx56v)
