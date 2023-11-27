@@ -2,7 +2,7 @@ import gameLogic from '../index.js';
 
 const getRandomInt = (min, max) => Math.ceil(Math.random() * (max - min)) + min;
 
-const checkEven = (num) => (num === 0 ? true : false);
+const checkEven = (num) => (num === 0);
 
 const runGameEven = () => {
   const startInterval = 1;
