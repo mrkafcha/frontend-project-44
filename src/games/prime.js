@@ -1,3 +1,5 @@
+import gameLogic from '../index.js';
+
 const getRandomInt = (min, max) => Math.ceil(Math.random() * (max - min)) + min;
 
 const getEvenResult = (num) => {
@@ -22,4 +24,6 @@ const runGamePrime = () => {
   return [startDescription, question, result];
 };
 
-export default runGamePrime;
+export default () => {
+  gameLogic(runGamePrime);
+};
