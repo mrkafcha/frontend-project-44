@@ -3,14 +3,14 @@ import readlineSync from 'readline-sync';
 let startRound = 1;
 const lastRound = 3;
 
-export default (gameLogic) => {
+export default (gameEngine) => {
   const userName = readlineSync.question('Welcome to the Brain Games!\nMay I have your name? ');
   console.log(`Hello, ${userName}!`);
-  const [initialDescription] = gameLogic();
+  const [initialDescription] = gameEngine();
   console.log(initialDescription);
 
   for (; startRound <= lastRound; startRound += 1) {
-    const [, question, result] = gameLogic();
+    const [, question, result] = gameEngine();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
