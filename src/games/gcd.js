@@ -1,3 +1,5 @@
+import gameLogic from '../index.js';
+
 const getRandomInt = (min, max) => Math.ceil(Math.random() * (max - min)) + min;
 
 const getResultDivider = (numOne, numTwo) => {
@@ -23,4 +25,6 @@ const runGameGcd = () => {
   return [startDescription, question, result];
 };
 
-export default runGameGcd;
+export default () => {
+  gameLogic(runGameGcd);
+};
