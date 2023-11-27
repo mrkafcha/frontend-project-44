@@ -1,6 +1,5 @@
-import gameLogic from '../index.js';
-
-const getRandomInt = (min, max) => Math.ceil(Math.random() * (max - min)) + min;
+import runGameLogic from '../index.js';
+import getRandomInt from '../random.js';
 
 const getResultDivider = (numOne, numTwo) => {
   const divider = numOne >= numTwo ? numTwo : numOne;
@@ -13,18 +12,19 @@ const getResultDivider = (numOne, numTwo) => {
   return 1;
 };
 
+const startDescription = 'Find the greatest common divisor of given numbers.';
+
 const runGameGcd = () => {
-  const startInterval = 0;
-  const endInterval = 50;
-  const startDescription = 'Find the greatest common divisor of given numbers.';
+  const startInterval = 1;
+  const endInterval = 51;
   const numOne = getRandomInt(startInterval, endInterval);
   const numTwo = getRandomInt(startInterval, endInterval);
   const result = String(getResultDivider(numOne, numTwo));
   const question = `${numOne} ${numTwo}`;
 
-  return [startDescription, question, result];
+  return [question, result];
 };
 
 export default () => {
-  gameLogic(runGameGcd);
+  runGameLogic(startDescription, runGameGcd);
 };
