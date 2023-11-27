@@ -1,6 +1,5 @@
-import gameLogic from '../index.js';
-
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+import runGameLogic from '../index.js';
+import getRandomInt from '../random.js';
 
 const getRandomOperators = (operation) => {
   const indexFirstOperator = 0;
@@ -18,23 +17,24 @@ const resultOperation = (numOne, numTwo, operator) => {
     case '*':
       return numOne * numTwo;
     default:
-      return false;
+      throw new Error('Unknown state!');
   }
 };
+
+const startDescription = 'What is the result of the expression?';
 
 const runGameCalc = () => {
   const startInterval = 1;
   const endInterval = 21;
-  const startDescription = 'What is the result of the expression?';
   const firstNumber = getRandomInt(startInterval, endInterval);
   const secondNumber = getRandomInt(startInterval, endInterval);
   const operator = getRandomOperators(['+', '-', '*']);
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const result = String(resultOperation(firstNumber, secondNumber, operator));
 
-  return [startDescription, question, result];
+  return [question, result];
 };
 
 export default () => {
-  gameLogic(runGameCalc);
+  runGameLogic(startDescription, runGameCalc);
 };
