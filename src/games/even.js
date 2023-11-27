@@ -1,3 +1,5 @@
+import gameLogic from '../index.js';
+
 const getRandomInt = (min, max) => Math.ceil(Math.random() * (max - min)) + min;
 
 const checkEven = (num) => (num === 0 ? 'yes' : 'no');
@@ -14,4 +16,6 @@ const runGameEven = () => {
   return [startDescription, question, result];
 };
 
-export default runGameEven;
+export default () => {
+  gameLogic(runGameEven);
+};
