@@ -1,3 +1,5 @@
+import gameLogic from '../index.js';
+
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const getArrProgression = (start, length, interval) => {
@@ -31,4 +33,6 @@ const runGameProgression = () => {
   return [startDescription, question, result];
 };
 
-export default runGameProgression;
+export default () => {
+  gameLogic(runGameProgression);
+};

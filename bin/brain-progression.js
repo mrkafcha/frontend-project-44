@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import name from '../src/index.js';
-import runGameProgression from '../src/games/progression.js';
+import runLogicGameProgression from '../src/games/progression.js';
 
-name(runGameProgression);
+runLogicGameProgression();
