@@ -19,7 +19,7 @@ const runGamePrime = () => {
   const num = getRandomInt(startInterval, endInterval);
   const result = getEvenResult(num) ? 'yes' : 'no';
 
-  return [String(num), result];
+  return [num, result];
 };
 
 export default () => {
