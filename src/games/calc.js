@@ -1,3 +1,5 @@
+import gameLogic from '../index.js';
+
 const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 const getRandomOperators = (operation) => {
@@ -33,4 +35,6 @@ const runGameCalc = () => {
   return [startDescription, question, result];
 };
 
-export default runGameCalc;
+export default () => {
+  gameLogic(runGameCalc);
+};
