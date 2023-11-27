@@ -14,7 +14,7 @@ const getEvenResult = (num) => {
 const startDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const runGamePrime = () => {
-  const startInterval = 1;
+  const startInterval = 2;
   const endInterval = 53;
   const num = getRandomInt(startInterval, endInterval);
   const result = getEvenResult(num) ? 'yes' : 'no';
