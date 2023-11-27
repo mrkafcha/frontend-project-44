@@ -1,6 +1,5 @@
-import gameLogic from '../index.js';
-
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+import runGameLogic from '../index.js';
+import getRandomInt from '../random.js';
 
 const getArrProgression = (start, length, interval) => {
   const arrProgression = [];
@@ -14,13 +13,14 @@ const getArrProgression = (start, length, interval) => {
   return arrProgression;
 };
 
+const startDescription = 'What number is missing in the progression?';
+
 const runGameProgression = () => {
   const startInterval = 1;
   const endInterval = 41;
   const endLengthInterval = 11;
   const startLengthProgression = 4;
   const endLengthProgression = 10;
-  const startDescription = 'What number is missing in the progression?';
   const numstart = getRandomInt(startInterval, endInterval);
   const lengthProgression = getRandomInt(startLengthProgression, endLengthProgression);
   const hiddenNum = getRandomInt(startInterval, lengthProgression);
@@ -30,9 +30,9 @@ const runGameProgression = () => {
   arrProgression[hiddenNum] = '..';
   const question = `${arrProgression.join(' ')}`;
 
-  return [startDescription, question, result];
+  return [question, result];
 };
 
 export default () => {
-  gameLogic(runGameProgression);
+  runGameLogic(startDescription, runGameProgression);
 };
