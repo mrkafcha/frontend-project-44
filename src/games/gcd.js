@@ -13,10 +13,10 @@ const getResultDivider = (numOne, numTwo) => {
 };
 
 const startDescription = 'Find the greatest common divisor of given numbers.';
+const startInterval = 1;
+const endInterval = 51;
 
 const runGameGcd = () => {
-  const startInterval = 1;
-  const endInterval = 51;
   const numOne = getRandomInt(startInterval, endInterval);
   const numTwo = getRandomInt(startInterval, endInterval);
   const result = String(getResultDivider(numOne, numTwo));
