@@ -8,7 +8,7 @@ const getRandomOperators = (operation) => {
   return operation[randomIndex];
 };
 
-const resultOperation = (numOne, numTwo, operator) => {
+const calculateResult = (numOne, numTwo, operator) => {
   switch (operator) {
     case '-':
       return numOne - numTwo;
@@ -22,15 +22,15 @@ const resultOperation = (numOne, numTwo, operator) => {
 };
 
 const startDescription = 'What is the result of the expression?';
+const startInterval = 1;
+const endInterval = 21;
 
 const runGameCalc = () => {
-  const startInterval = 1;
-  const endInterval = 21;
   const firstNumber = getRandomInt(startInterval, endInterval);
   const secondNumber = getRandomInt(startInterval, endInterval);
   const operator = getRandomOperators(['+', '-', '*']);
   const question = `${firstNumber} ${operator} ${secondNumber}`;
-  const result = String(resultOperation(firstNumber, secondNumber, operator));
+  const result = String(calculateResult(firstNumber, secondNumber, operator));
 
   return [question, result];
 };
