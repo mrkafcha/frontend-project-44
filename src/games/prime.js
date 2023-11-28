@@ -1,7 +1,7 @@
 import runGameLogic from '../index.js';
 import getRandomInt from '../random.js';
 
-const getEvenResult = (num) => {
+const isPrime = (num) => {
   for (let i = Math.round(num / 2); i >= 2; i -= 1) {
     if (num % i === 0) {
       return false;
@@ -12,14 +12,14 @@ const getEvenResult = (num) => {
 };
 
 const startDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const startInterval = 2;
+const endInterval = 53;
 
 const runGamePrime = () => {
-  const startInterval = 2;
-  const endInterval = 53;
   const num = getRandomInt(startInterval, endInterval);
-  const result = getEvenResult(num) ? 'yes' : 'no';
+  const result = isPrime(num) ? 'yes' : 'no';
 
-  return [num, result];
+  return [String(num), result];
 };
 
 export default () => {
