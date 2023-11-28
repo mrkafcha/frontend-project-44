@@ -14,13 +14,13 @@ const getArrProgression = (start, length, interval) => {
 };
 
 const startDescription = 'What number is missing in the progression?';
+const startInterval = 1;
+const endInterval = 41;
+const endLengthInterval = 11;
+const startLengthProgression = 4;
+const endLengthProgression = 10;
 
 const runGameProgression = () => {
-  const startInterval = 1;
-  const endInterval = 41;
-  const endLengthInterval = 11;
-  const startLengthProgression = 4;
-  const endLengthProgression = 10;
   const numstart = getRandomInt(startInterval, endInterval);
   const lengthProgression = getRandomInt(startLengthProgression, endLengthProgression);
   const hiddenNum = getRandomInt(startInterval, lengthProgression);
